@@ -1,0 +1,239 @@
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Slide Item */
+.carousel .list .item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel .list .item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Background Image */
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  max-width: 70%;
+  width: 1140px;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+/* Text Styling */
+.content .author {
+  font-weight: bold;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.content .title,
+.content .topic {
+  font-size: clamp(2rem, 6vw, 5em);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.content .topic {
+  color: #f1683a;
+}
+
+.content .des {
+  margin-top: 15px;
+  font-size: 1rem;
+  max-width: 50%;
+  text-align: justify;
+  color: #f9f9f9;
+}
+
+/* Buttons */
+.content .buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.content .buttons button {
+  padding: 10px 20px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content .buttons button:first-child {
+  background: #eee;
+  color: #333;
+}
+
+.content .buttons button:last-child {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Thumbnails */
+.thumbnail {
+  position: absolute;
+  bottom: 120px;
+  right: 5%;
+  display: flex;
+  gap: 20px;
+  z-index: 30;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail .item {
+  width: 160px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.thumbnail .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+
+.thumbnail .title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.thumbnail .description {
+  font-size: 0.75rem;
+}
+
+/* Arrows */
+.arrows {
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+.arrows button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.arrows button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Animation Timing Line */
+.carousel .time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: #f1683a;
+  z-index: 1000;
+  animation: runningTime 3s linear forwards;
+}
+
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel .list .item .content {
+    top: 10%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .content .title,
+  .content .topic {
+    font-size: 2rem;
+  }
+
+  .thumbnail {
+    bottom: 60px;
+    gap: 10px;
+  }
+
+  .thumbnail .item {
+    width: 100px;
+    height: 150px;
+  }
+
+  .arrows {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail .item {
+    width: 80px;
+    height: 120px;
+  }
+
+  .arrows button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .content .buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .content .buttons button {
+    width: 100%;
+  }
+}
