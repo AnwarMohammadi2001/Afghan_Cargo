@@ -61,21 +61,7 @@ const Header = ({ toggleNav, isNavOpen }) => {
           </div>
         </div>
 
-        {/* Responsive toggler */}
-        <div className="lg:hidden flex items-center justify-end">
-          <input
-            id="check-icon"
-            type="checkbox"
-            className="check-icon hidden"
-            checked={isNavOpen}
-            onChange={toggleNav}
-          />
-          <label htmlFor="check-icon" className="icon-menu cursor-pointer">
-            <div className="bar bar--1"></div>
-            <div className="bar bar--2"></div>
-            <div className="bar bar--3"></div>
-          </label>
-        </div>
+        
       </div>
     </header>
   );

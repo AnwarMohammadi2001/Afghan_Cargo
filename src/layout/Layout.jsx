@@ -36,8 +36,7 @@ const Layout = () => {
   return (
     <div className="relative dark:bg-zinc-900 transition-colors duration-500">
       <header className="w-full transition-colors duration-500">
-        <Header toggleNav={toggleNav} isNavOpen={isNavOpen} />
-        <Navbar isNavOpen={isNavOpen} toggleNav={closeNav} />
+        <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
       </header>
       <main>
         <Outlet />
