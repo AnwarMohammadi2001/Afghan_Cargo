@@ -18,7 +18,7 @@ const Home = () => {
   const closeNav = () => setIsNavOpen(false);
 
   return (
-    <div className=" bg-white dark:bg-zinc-900 transition-colors duration-500">
+    <div className=" bg-white dark:bg-zinc-900 transition-colors duration-500 min-h-screen">
       {/* <Hero /> */}
       <HeroMain />
       <WhoWeAre />

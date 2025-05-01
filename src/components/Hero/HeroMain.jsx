@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPlane } from "react-icons/fa";
 
+
 // Animation Variants (Memoized to avoid re-creation on each render)
 const fadeIn = (direction, delay) => {
   return {

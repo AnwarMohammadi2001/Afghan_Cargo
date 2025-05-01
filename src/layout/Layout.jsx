@@ -5,6 +5,7 @@ import Header from "../components/Navbar/Header";
 import Footer from "../components/Footer";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
+import { RiArrowUpDoubleLine } from "react-icons/ri";
 
 const Layout = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -47,9 +48,9 @@ const Layout = () => {
         <div className="fixed bottom-10 z-50 right-10">
           <button
             onClick={scrollToTop}
-            className="bg-[#ED8D1D] text-black dark:bg-gray-100 dark:text-slate-900 p-2 rounded-lg shadow-lg hover:text-white transition duration-300 cursor-pointer"
+            className="bg-[#ED8D1D] text-black dark:bg-gray-100 dark:text-slate-900 p-2 shadow-lg hover:text-white transition duration-300 cursor-pointer"
           >
-            <IoMdArrowRoundUp size={24} />
+            <RiArrowUpDoubleLine size={28} className="animate-pulse" />
           </button>
         </div>
       )}
