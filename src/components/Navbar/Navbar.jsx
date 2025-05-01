@@ -11,9 +11,8 @@ const navItems = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "About Us", path: "/about" },
   { id: 3, name: "Services", path: "/services" },
-  { id: 4, name: "Quote", path: "/quote" },
-  { id: 5, name: "Image Gallery", path: "/gallery" },
-  { id: 6, name: "Contact Us", path: "/contact" },
+  { id: 4, name: "Tracking", path: "/quote" },
+  { id: 5, name: "Contact Us", path: "/contact" },
 ];
 
 const LOCAL_STORAGE_KEY = "recentTrackingSearches";
@@ -96,7 +95,7 @@ const Navbar = () => {
           isScrolled ? "fixed top-0 left-0 shadow-md" : "relative"
         }`}
       >
-        <div className="flex w-full items-center px-5 md:px-10 lg:px-24 justify-between py-2">
+        <div className="flex w-full items-center px-5 md:px-10 lg:px-[250px] justify-between py-2">
           {/* Logo */}
           <Link to="/">
             <img
