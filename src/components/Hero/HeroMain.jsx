@@ -48,8 +48,8 @@ const SLIDES = [
     id: 1,
     name: "Afgan Cargo",
     desc: "We bridge the gap between you and your cargo with our reliable transport solutions.",
-    image1: "/slider/ab1.webp",
-    image2: "/slider/ab2.jpg",
+    image1: "/slider/ser1.jpg",
+    image2: "/slider/ser2.avif",
     alt: "Cargo transportation services",
     path: "/services",
     text: "Learn More",
@@ -58,8 +58,8 @@ const SLIDES = [
     id: 2,
     name: "Afgan Cargo",
     desc: "Trained and professional team to handle your cargo with care.",
-    image1: "/slider/ab1.webp",
-    image2: "/slider/ab1.webp",
+    image1: "/slider/about1.jpg",
+    image2: "/slider/about2.webp",
     alt: "Professional cargo handling",
     path: "/about",
     text: "About Us",
@@ -68,8 +68,8 @@ const SLIDES = [
     id: 3,
     name: "Afgan Cargo",
     desc: "Easy Steps for Deliver products to your destination.",
-    image1: "/slider/ab1.webp",
-    image2: "/slider/ab1.webp",
+    image1: "/slider/contact.webp",
+    image2: "/slider/contact2.avif",
     alt: "Easy cargo delivery process",
     path: "/contact",
     text: "Contact Us",
@@ -115,8 +115,7 @@ const HeroMain = () => {
     >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        // autoplay={{ delay: 5000, disableOnInteraction: false }}
         slidesPerView={1}
         loop={true}
         speed={2000}
@@ -192,6 +191,8 @@ const HeroMain = () => {
                     ease: [0.25, 0.25, 0.25, 0.75],
                   }}
                 />
+               
+
                 <motion.img
                   key={`img2-${animationKey}`}
                   src={slide.image2}
@@ -199,15 +200,13 @@ const HeroMain = () => {
                   className="absolute bottom-[13%] right-[23%] h-[350px] w-[350px] rounded-full object-cover opacity-80"
                   loading="lazy"
                   initial={{ x: 100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 0.8 }}
+                  animate={{ x: 0, opacity: 1 }}
                   transition={{
                     duration: 1,
                     delay: 0.6,
                     ease: [0.25, 0.25, 0.25, 0.75],
                   }}
                 />
-                {/* Subtle gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent z-10"></div>
               </div>
             </div>
           </SwiperSlide>
@@ -215,12 +214,12 @@ const HeroMain = () => {
       </Swiper>
 
       {/* Navigation Buttons */}
-      <div className="absolute bottom-[190px] md:bottom-[150px] right-1/2 translate-x-1/2 md:left-[15%] md:translate-x-0 z-20 flex gap-10 group">
+      <div className="absolute bottom-[190px] md:bottom-[150px] right-1/2 translate-x-1/2 md:left-[15%] md:translate-x-0 z-20 flex gap-5 group">
         <button
           ref={(node) => setPrevEl(node)}
           onMouseDown={(e) => e.preventDefault()}
           aria-label="Previous Slide"
-          className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-white text-white shadow-md cursor-pointer hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-[50px] h-[50px] flex items-center justify-center bg-gray-600   text-white shadow-md cursor-pointer hover:bg-gray-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <MdArrowBackIos size={24} />
         </button>
@@ -228,7 +227,7 @@ const HeroMain = () => {
           ref={(node) => setNextEl(node)}
           onMouseDown={(e) => e.preventDefault()}
           aria-label="Next Slide"
-          className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-white text-white shadow-md cursor-pointer hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-[50px] h-[50px] flex items-center justify-center bg-gray-600   text-white shadow-md cursor-pointer hover:bg-gray-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <MdArrowForwardIos size={24} />
         </button>
